@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 
-class CupertinotabscaffoldWidget extends StatefulWidget {
+class CupertinoTabScaffoldWidget extends StatefulWidget {
   @override
-  State<CupertinotabscaffoldWidget> createState() => cupertinoscaffoldState();
+  State<CupertinoTabScaffoldWidget> createState() => CupertinoTabScaffoldState();
 }
 
-class cupertinoscaffoldState extends State<CupertinotabscaffoldWidget> {
+class CupertinoTabScaffoldState extends State<CupertinoTabScaffoldWidget> {
   @override
   Widget build(BuildContext context) {
     return CupertinoTabScaffold(

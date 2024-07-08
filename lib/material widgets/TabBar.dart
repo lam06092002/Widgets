@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class TabBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -6,7 +7,7 @@ class TabBarWidget extends StatelessWidget {
       length: 3, // Number of tabs
       child: Scaffold(
         appBar: AppBar(
-          title: Text('TabBar Widget Example'),
+          title: Text('TabBar Widget'),
           bottom: TabBar(
             tabs: [
               Tab(icon: Icon(Icons.home), text: 'Home'),

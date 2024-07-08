@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-class DropdownbuttonWidget extends StatefulWidget{
+class DropdownButtonWidget extends StatefulWidget {
   @override
-  State<DropdownbuttonWidget> createState() => dropdownState();
-
+  State<DropdownButtonWidget> createState() => DropdownButtonState();
 }
-class dropdownState extends State<DropdownbuttonWidget>{
+
+class DropdownButtonState extends State<DropdownButtonWidget> {
   String dropdownValue = 'One';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,23 +24,23 @@ class dropdownState extends State<DropdownbuttonWidget>{
               color: Colors.black,
               fontSize: 30,
             ),
-              // underline: Container(
-              //   height: ,
-              //   color: Colors.white,
-              // ),
+            // underline: Container(
+            //   height: ,
+            //   color: Colors.white,
+            // ),
 
             items: const [
               DropdownMenuItem<String>(
                 value: 'One',
-                child: Text('One',style: TextStyle(fontSize: 30)),
+                child: Text('One', style: TextStyle(fontSize: 30)),
               ),
               DropdownMenuItem<String>(
                 value: 'Two',
-                child: Text('Two',style: TextStyle(fontSize: 30)),
+                child: Text('Two', style: TextStyle(fontSize: 30)),
               ),
               DropdownMenuItem<String>(
                 value: 'Three',
-                child: Text('Three',style: TextStyle(fontSize: 30)),
+                child: Text('Three', style: TextStyle(fontSize: 30)),
               ),
             ],
             onChanged: (String? newvalue) {
@@ -47,12 +48,9 @@ class dropdownState extends State<DropdownbuttonWidget>{
                 dropdownValue = newvalue!;
               });
             },
-
           ),
-
-        ) ,
+        ),
       ),
     );
   }
-
 }

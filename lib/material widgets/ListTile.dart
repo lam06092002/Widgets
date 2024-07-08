@@ -4,7 +4,7 @@ class ListTileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('ListTile Sample')),
+      appBar: AppBar(title: const Text('ListTile')),
       body: ListView(
         children: const <Widget>[
           ListTile(

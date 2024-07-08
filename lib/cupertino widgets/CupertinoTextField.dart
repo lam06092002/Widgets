@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-class CupertinotextfieldWidget extends StatelessWidget {
+class CupertinoTextFieldWidget extends StatelessWidget {
   final TextEditingController textController= TextEditingController();
 
 

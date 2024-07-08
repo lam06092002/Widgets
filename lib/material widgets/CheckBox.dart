@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class CheckboxWidget extends StatefulWidget {
+class CheckBoxWidget extends StatefulWidget {
   @override
-  _CheckboxWidgetState createState() => _CheckboxWidgetState();
+  _CheckBoxWidgetState createState() => _CheckBoxWidgetState();
 }
 
-class _CheckboxWidgetState extends State<CheckboxWidget> {
+class _CheckBoxWidgetState extends State<CheckBoxWidget> {
   bool _isChecked = false;
 
   @override

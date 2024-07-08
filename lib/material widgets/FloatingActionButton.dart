@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-class floatingactionbuttonWidget extends StatelessWidget {
+class FloatingActionButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

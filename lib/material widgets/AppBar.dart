@@ -30,7 +30,7 @@ class AppBarWidget extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Text('This is the body of the AppBar example'),
+        child: Text('body AppBar'),
       ),
     );
   }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class AlertdialogWidget extends StatefulWidget{
+class AlertDialogWidget extends StatefulWidget{
   @override
-  State<AlertdialogWidget> createState() => AlertdialogState();
+  State<AlertDialogWidget> createState() => AlertDialogState();
 }
-class AlertdialogState extends State<AlertdialogWidget>{
+class AlertDialogState extends State<AlertDialogWidget>{
   @override
   Widget build(BuildContext context) {
     return Center(

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class iconButtonWidget extends StatefulWidget{
+class IconButtonWidget extends StatefulWidget{
   @override
-  State<iconButtonWidget> createState() => iconButtonState();
+  State<IconButtonWidget> createState() => IconButtonState();
 }
-class iconButtonState extends State<iconButtonWidget>{
+class IconButtonState extends State<IconButtonWidget>{
   int click =0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Iconbutton'),
+        title: Text('IconButton'),
       ),
       body: Container(
         color: Colors.white,

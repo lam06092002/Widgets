@@ -9,8 +9,8 @@ import 'package:metarial_widget/material widgets/SimpleDialog.dart';
 import 'package:metarial_widget/material widgets/Slider.dart';
 import 'package:metarial_widget/material widgets/Switch.dart';
 import 'package:metarial_widget/material widgets/TextField.dart';
-import 'package:metarial_widget/material widgets/popupmenuButton.dart';
-import 'package:metarial_widget/material widgets/radio.dart';
+import 'package:metarial_widget/material widgets/PopupMenuButton.dart';
+import 'package:metarial_widget/material widgets/Radio.dart';
 import 'cupertino widgets/CupertinoActionSheet.dart';
 import 'cupertino widgets/CupertinoButton.dart';
 import 'cupertino widgets/CupertinoDialog.dart';
@@ -23,12 +23,12 @@ import 'cupertino widgets/CupertinoTabScaffold.dart';
 import 'cupertino widgets/CupertinoTextField.dart';
 import 'material widgets/IconButton.dart';
 import 'material widgets/FloatingActionButton.dart';
-import 'material widgets/buttonBar.dart';
-import 'material widgets/listtile.dart';
-import 'material widgets/scaffold.dart';
-import 'material widgets/appBar.dart';
+import 'material widgets/ButtonBar.dart';
+import 'material widgets/ListTile.dart';
+import 'material widgets/Scaffold.dart';
+import 'material widgets/AppBar.dart';
 import 'material widgets/TabBar.dart';
-import 'material widgets/bottomNavigationBar.dart';
+import 'material widgets/BottomNavigationBar.dart';
 
 void main() {
   runApp(MyApp());
@@ -49,29 +49,29 @@ class MyApp extends StatelessWidget {
         '/bottomNavigationBar': (context) => BottomNavigationBarWidget(),
         '/tabBar': (context) => TabBarWidget(),
         '/listtile': (context) => ListTileWidget(),
-        '/floatingactionbutton': (context) => floatingactionbuttonWidget(),
-        '/iconButton': (context) => iconButtonWidget(),
-        '/dropdown': (context) => DropdownbuttonWidget(),
-        '/pupup': (context) => pupupMenuButtonWidget(),
-        '/buttonbar': (context) => ButtonbarWidget(),
-        '/checkbox': (context) => CheckboxWidget(),
+        '/floatingactionbutton': (context) => FloatingActionButtonWidget(),
+        '/iconButton': (context) => IconButtonWidget(),
+        '/dropdown': (context) => DropdownButtonWidget(),
+        '/popup': (context) => PopupMenuButtonWidget(),
+        '/buttonbar': (context) => ButtonBarWidget(),
+        '/checkbox': (context) => CheckBoxWidget(),
         '/textfield': (context) => TextFieldWidget(),
         '/radio': (context) => RadioWidget(),
         '/switch': (context) => SwitchWidget(),
         '/slider': (context) => SliderWidget(),
         '/datetime': (context) => DateTimePickerWidget(),
         '/simpledialog': (context) => SimpleDialogWidget(),
-        '/alertdialog': (context) => AlertdialogWidget(),
+        '/alertdialog': (context) => AlertDialogWidget(),
         '/cupertinobutton': (context) => CupertinoButtonWidget(),
         '/cupertinopicker': (context) => CupertinoPickersWidget(),
         '/cupertinoslider': (context) => CupertinoSliderWidget(),
-        '/cupertinoTacScaffold': (context) => CupertinotabscaffoldWidget(),
+        '/cupertinoTacScaffold': (context) => CupertinoTabScaffoldWidget(),
         '/cupertinodialog': (context) => CupertinoDialogWidget(),
-        '/cupertinotextfield': (context) => CupertinotextfieldWidget(),
+        '/cupertinotextfield': (context) => CupertinoTextFieldWidget(),
         '/cupertinoPopupSurface': (context) => CupertinoPopupSurfaceWidget(),
         '/cupertinoActionSheet': (context) => CupertinoActionSheetWidget(),
-        '/cupertinoPageTransition': (context) => CupertinoPageTransitionWidget(),
-
+        '/cupertinoPageTransition': (context) =>
+            CupertinoPageTransitionWidget(),
       },
     );
   }
@@ -87,7 +87,7 @@ class WidgetMenu extends StatelessWidget {
     {'name': 'FloatingActionButton', 'route': '/floatingactionbutton'},
     {'name': 'IconButton', 'route': '/iconButton'},
     {'name': 'Dropdown', 'route': '/dropdown'},
-    {'name': 'PupupMenuButton', 'route': '/pupup'},
+    {'name': 'PopupMenuButton', 'route': '/popup'},
     {'name': 'ButtonBar', 'route': '/buttonbar'},
     {'name': 'CheckBox ', 'route': '/checkbox'},
     {'name': 'TextField ', 'route': '/textfield'},

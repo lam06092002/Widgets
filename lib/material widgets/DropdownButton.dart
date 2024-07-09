@@ -24,11 +24,6 @@ class DropdownButtonState extends State<DropdownButtonWidget> {
               color: Colors.black,
               fontSize: 30,
             ),
-            // underline: Container(
-            //   height: ,
-            //   color: Colors.white,
-            // ),
-
             items: const [
               DropdownMenuItem<String>(
                 value: 'One',

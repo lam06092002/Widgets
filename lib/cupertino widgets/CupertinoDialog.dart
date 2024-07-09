@@ -7,21 +7,21 @@ class CupertinoDialogWidget extends StatelessWidget {
     return CupertinoApp(
       home: CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
-          middle: Text('Cupertino Dialog Example'),
+          middle: Text('Cupertino Dialog '),
         ),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CupertinoButton(
-                child: Text('Show Cupertino Dialog'),
+                child: Text('Cupertino Dialog'),
                 onPressed: () {
                   _showCupertinoDialog(context);
                 },
               ),
               SizedBox(height: 20),
               CupertinoButton(
-                child: Text('Show Cupertino Alert Dialog'),
+                child: Text('Cupertino Alert Dialog'),
                 onPressed: () {
                   _showCupertinoAlertDialog(context);
                 },
@@ -39,7 +39,7 @@ class CupertinoDialogWidget extends StatelessWidget {
       builder: (BuildContext context) {
         return CupertinoAlertDialog(
           title: Text('Cupertino Dialog'),
-          content: Text('This is a Cupertino Dialog.'),
+          content: Text('Cupertino Dialog.'),
           actions: <CupertinoDialogAction>[
             CupertinoDialogAction(
               child: Text('Cancel'),
@@ -70,7 +70,7 @@ class CupertinoDialogWidget extends StatelessWidget {
       builder: (BuildContext context) {
         return CupertinoAlertDialog(
           title: Text('Cupertino Alert Dialog'),
-          content: Text('This is a Cupertino Alert Dialog.'),
+          content: Text('Cupertino Alert Dialog.'),
           actions: <CupertinoDialogAction>[
             CupertinoDialogAction(
               child: Text('Cancel'),

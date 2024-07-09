@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
 
-class PopupMenuButtonWidget extends StatefulWidget {  @override
+class PopupMenuButtonWidget extends StatefulWidget {
+  @override
   State<PopupMenuButtonWidget> createState() => PopupMenuButtonState();
-
 }
-class PopupMenuButtonState extends State<PopupMenuButtonWidget>{
-  String item1= 'Item1';
-  String item2= 'Item2';
+
+class PopupMenuButtonState extends State<PopupMenuButtonWidget> {
+  String item1 = 'Item1';
+  String item2 = 'Item2';
   String title = 'Title';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('popupmenuButton'),
+        title: Text('PopupMenuButton'),
       ),
       body: Container(
         child: ListTile(
           title: Text('List'),
           trailing: PopupMenuButton(
-            itemBuilder: (context) =>[
+            itemBuilder: (context) => [
               PopupMenuItem(
                 child: Text(item1),
                 value: item1,
@@ -28,7 +30,7 @@ class PopupMenuButtonState extends State<PopupMenuButtonWidget>{
                 value: item2,
               )
             ],
-            onSelected: (String newvalue){
+            onSelected: (String newvalue) {
               setState(() {
                 title = newvalue;
               });
@@ -38,8 +40,4 @@ class PopupMenuButtonState extends State<PopupMenuButtonWidget>{
       ),
     );
   }
-
 }
-
-
-

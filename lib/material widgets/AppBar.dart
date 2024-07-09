@@ -5,7 +5,7 @@ class AppBarWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AppBar Widget Example'),
+        title: Text('AppBar Widget '),
         backgroundColor: Colors.blue,
         elevation: 4.0,
         leading: IconButton(

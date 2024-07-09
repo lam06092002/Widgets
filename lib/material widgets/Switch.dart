@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class SwitchWidget extends StatefulWidget {
   @override
-  _SwitchWidgetState createState() => _SwitchWidgetState();
+  SwitchWidgetState createState() => SwitchWidgetState();
 }
 
-class _SwitchWidgetState extends State<SwitchWidget> {
-  bool _switchValue = false;
+class SwitchWidgetState extends State<SwitchWidget> {
+  bool switchValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +16,10 @@ class _SwitchWidgetState extends State<SwitchWidget> {
       ),
       body: Center(
         child: Switch(
-          value: _switchValue,
+          value: switchValue,
           onChanged: (bool value) {
             setState(() {
-              _switchValue = value;
+              switchValue = value;
             });
           },
         ),

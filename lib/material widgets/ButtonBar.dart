@@ -10,7 +10,7 @@ class ButtonBarState extends State<ButtonBarWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ButtonBar And Flat'),
+        title: Text('ButtonBar '),
       ),
       body: Center(
         child: ButtonBar(

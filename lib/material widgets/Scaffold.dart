@@ -12,7 +12,7 @@ class ScaffoldWidget extends StatelessWidget {
         child: Text('Body'),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed:  () {
+        onPressed: () {
           // Action when button is pressed
         },
         child: Icon(Icons.add),

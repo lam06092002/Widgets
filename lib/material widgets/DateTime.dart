@@ -2,42 +2,42 @@ import 'package:flutter/material.dart';
 
 class DateTimePickerWidget extends StatefulWidget {
   @override
-  _DateTimePickerWidgetState createState() => _DateTimePickerWidgetState();
+  DateTimePickerWidgetState createState() => DateTimePickerWidgetState();
 }
 
-class _DateTimePickerWidgetState extends State<DateTimePickerWidget> {
-  late DateTime _selectedDate;
-  late TimeOfDay _selectedTime;
+class DateTimePickerWidgetState extends State<DateTimePickerWidget> {
+  late DateTime selectedDate;
+  late TimeOfDay selectedTime;
 
   @override
   void initState() {
     super.initState();
-    _selectedDate = DateTime.now();
-    _selectedTime = TimeOfDay.now();
+    selectedDate = DateTime.now();
+    selectedTime = TimeOfDay.now();
   }
 
-  Future<void> _selectDate(BuildContext context) async {
+  Future<void> selectDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
       context: context,
-      initialDate: _selectedDate,
+      initialDate: selectedDate,
       firstDate: DateTime(2000),
       lastDate: DateTime(2101),
     );
-    if (picked != null && picked != _selectedDate) {
+    if (picked != null && picked != selectedDate) {
       setState(() {
-        _selectedDate = picked;
+        selectedDate = picked;
       });
     }
   }
 
-  Future<void> _selectTime(BuildContext context) async {
+  Future<void> selectTime(BuildContext context) async {
     final TimeOfDay? picked = await showTimePicker(
       context: context,
-      initialTime: _selectedTime,
+      initialTime: selectedTime,
     );
-    if (picked != null && picked != _selectedTime) {
+    if (picked != null && picked != selectedTime) {
       setState(() {
-        _selectedTime = picked;
+        selectedTime = picked;
       });
     }
   }
@@ -52,15 +52,15 @@ class _DateTimePickerWidgetState extends State<DateTimePickerWidget> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Selected Date: ${_selectedDate.toLocal()}'),
+            Text('Selected Date: ${selectedDate.toLocal()}'),
             ElevatedButton(
-              onPressed: () => _selectDate(context),
+              onPressed: () => selectDate(context),
               child: Text('Select Date'),
             ),
             SizedBox(height: 20),
-            Text('Selected Time: $_selectedTime'),
+            Text('Selected Time: $selectedTime'),
             ElevatedButton(
-              onPressed: () => _selectTime(context),
+              onPressed: () => selectTime(context),
               child: Text('Select Time'),
             ),
           ],

@@ -24,7 +24,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BottomNavigationBar Example'),
+        title: Text('BottomNavigationBar '),
       ),
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class RadioWidget extends StatefulWidget {
   @override
-  _RadioWidgetState createState() => _RadioWidgetState();
+  RadioWidgetState createState() => RadioWidgetState();
 }
 
-class _RadioWidgetState extends State<RadioWidget> {
-  int _selectedValue = 1;
+class RadioWidgetState extends State<RadioWidget> {
+  int selectedValue = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +21,10 @@ class _RadioWidgetState extends State<RadioWidget> {
             title: const Text('Option 1'),
             leading: Radio<int>(
               value: 1,
-              groupValue: _selectedValue,
+              groupValue: selectedValue,
               onChanged: (int? value) {
                 setState(() {
-                  _selectedValue = value!;
+                  selectedValue = value!;
                 });
               },
             ),
@@ -33,10 +33,10 @@ class _RadioWidgetState extends State<RadioWidget> {
             title: const Text('Option 2'),
             leading: Radio<int>(
               value: 2,
-              groupValue: _selectedValue,
+              groupValue: selectedValue,
               onChanged: (int? value) {
                 setState(() {
-                  _selectedValue = value!;
+                  selectedValue = value!;
                 });
               },
             ),
@@ -45,7 +45,7 @@ class _RadioWidgetState extends State<RadioWidget> {
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                  content: Text('Selected option: $_selectedValue'),
+                  content: Text('Selected option: $selectedValue'),
                 ),
               );
             },

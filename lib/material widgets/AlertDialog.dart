@@ -23,7 +23,7 @@ class AlertDialogState extends State<AlertDialogWidget>{
                 ],
             title: Text('AlertDialog'),
             contentPadding: EdgeInsets.all(20),
-            content: Text('This is the Alert Dialog'),
+            content: Text('Alert Dialog'),
           )
           );
         },

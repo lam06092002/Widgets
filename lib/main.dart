@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:metarial_widget/material widgets/AlertDialog.dart';
 import 'package:metarial_widget/material widgets/CheckBox.dart';
 import 'package:metarial_widget/material widgets/DateTime.dart';
@@ -14,7 +13,6 @@ import 'package:metarial_widget/material widgets/Radio.dart';
 import 'cupertino widgets/CupertinoActionSheet.dart';
 import 'cupertino widgets/CupertinoButton.dart';
 import 'cupertino widgets/CupertinoDialog.dart';
-
 import 'cupertino widgets/CupertinoPageTransition.dart';
 import 'cupertino widgets/CupertinoPicker.dart';
 import 'cupertino widgets/CupertinoPopupSurface.dart';
@@ -38,7 +36,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material Widgets Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

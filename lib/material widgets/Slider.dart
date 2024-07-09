@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 
 class SliderWidget extends StatefulWidget {
   @override
-  _SliderWidgetState createState() => _SliderWidgetState();
+  SliderWidgetState createState() => SliderWidgetState();
 }
 
-class _SliderWidgetState extends State<SliderWidget> {
-  double _currentSliderValue = 50;
+class SliderWidgetState extends State<SliderWidget> {
+  double currentSliderValue = 50;
 
   @override
   Widget build(BuildContext context) {
@@ -20,18 +20,18 @@ class _SliderWidgetState extends State<SliderWidget> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Slider(
-              value: _currentSliderValue,
+              value: currentSliderValue,
               min: 0,
               max: 100,
               divisions: 5,
-              label: _currentSliderValue.round().toString(),
+              label: currentSliderValue.round().toString(),
               onChanged: (double value) {
                 setState(() {
-                  _currentSliderValue = value;
+                  currentSliderValue = value;
                 });
               },
             ),
-            Text('Value: ${_currentSliderValue.round()}'),
+            Text('Value: ${currentSliderValue.round()}'),
           ],
         ),
       ),

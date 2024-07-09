@@ -3,13 +3,17 @@ import 'package:flutter/material.dart';
 
 class CupertinoPickersWidget extends StatefulWidget {
   @override
-  _CupertinoPickersWidgetState createState() => _CupertinoPickersWidgetState();
+  CupertinoPickersWidgetState createState() => CupertinoPickersWidgetState();
 }
 
-class _CupertinoPickersWidgetState extends State<CupertinoPickersWidget> {
-  int _selectedPickerIndex = 0;
+class CupertinoPickersWidgetState extends State<CupertinoPickersWidget> {
+  int selectedPickerIndex = 0;
 
-  final List<String> _pickerOptions = ['Cupertino Picker', 'Cupertino Date Picker', 'Cupertino Timer Picker'];
+  final List<String> pickerOptions = [
+    'Cupertino Picker',
+    'Cupertino Date Picker',
+    'Cupertino Timer Picker'
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -21,19 +25,19 @@ class _CupertinoPickersWidgetState extends State<CupertinoPickersWidget> {
         children: [
           CupertinoSegmentedControl<int>(
             children: {
-              0: Text(_pickerOptions[0]),
-              1: Text(_pickerOptions[1]),
-              2: Text(_pickerOptions[2]),
+              0: Text(pickerOptions[0]),
+              1: Text(pickerOptions[1]),
+              2: Text(pickerOptions[2]),
             },
             onValueChanged: (int value) {
               setState(() {
-                _selectedPickerIndex = value;
+                selectedPickerIndex = value;
               });
             },
-            groupValue: _selectedPickerIndex,
+            groupValue: selectedPickerIndex,
           ),
           Expanded(
-            child: _buildPicker(_selectedPickerIndex),
+            child: _buildPicker(selectedPickerIndex),
           ),
         ],
       ),
@@ -56,10 +60,10 @@ class _CupertinoPickersWidgetState extends State<CupertinoPickersWidget> {
 
 class CupertinoPickerWidget extends StatefulWidget {
   @override
-  _CupertinoPickerWidgetState createState() => _CupertinoPickerWidgetState();
+  CupertinoPickerWidgetState createState() => CupertinoPickerWidgetState();
 }
 
-class _CupertinoPickerWidgetState extends State<CupertinoPickerWidget> {
+class CupertinoPickerWidgetState extends State<CupertinoPickerWidget> {
   final List<String> items = ['Item 1', 'Item 2', 'Item 3'];
   late String selectedItem = 'Item 1';
 
@@ -88,17 +92,16 @@ class _CupertinoPickerWidgetState extends State<CupertinoPickerWidget> {
 
 class CupertinoDatePickerWidget extends StatefulWidget {
   @override
-  _CupertinoDatePickerWidgetState createState() =>
-      _CupertinoDatePickerWidgetState();
+  CupertinoDatePickerWidgetState createState() => CupertinoDatePickerWidgetState();
 }
 
-class _CupertinoDatePickerWidgetState extends State<CupertinoDatePickerWidget> {
-  late DateTime _selectedDate;
+class CupertinoDatePickerWidgetState extends State<CupertinoDatePickerWidget> {
+  late DateTime selectedDate;
 
   @override
   void initState() {
     super.initState();
-    _selectedDate = DateTime.now();
+    selectedDate = DateTime.now();
   }
 
   @override
@@ -107,14 +110,14 @@ class _CupertinoDatePickerWidgetState extends State<CupertinoDatePickerWidget> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text('Selected Date: $_selectedDate'),
+          Text('Selected Date: $selectedDate'),
           SizedBox(height: 20),
           CupertinoDatePicker(
             mode: CupertinoDatePickerMode.date,
-            initialDateTime: _selectedDate,
+            initialDateTime: selectedDate,
             onDateTimeChanged: (DateTime newDate) {
               setState(() {
-                _selectedDate = newDate;
+                selectedDate = newDate;
               });
             },
           ),
@@ -126,17 +129,16 @@ class _CupertinoDatePickerWidgetState extends State<CupertinoDatePickerWidget> {
 
 class CupertinoTimerPickerWidget extends StatefulWidget {
   @override
-  _CupertinoTimerPickerWidgetState createState() =>
-      _CupertinoTimerPickerWidgetState();
+  CupertinoTimerPickerWidgetState createState() => CupertinoTimerPickerWidgetState();
 }
 
-class _CupertinoTimerPickerWidgetState extends State<CupertinoTimerPickerWidget> {
-  late Duration _selectedTime;
+class CupertinoTimerPickerWidgetState extends State<CupertinoTimerPickerWidget> {
+  late Duration selectedTime;
 
   @override
   void initState() {
     super.initState();
-    _selectedTime = Duration(hours: 0, minutes: 0);
+    selectedTime = Duration(hours: 0, minutes: 0);
   }
 
   @override
@@ -145,14 +147,14 @@ class _CupertinoTimerPickerWidgetState extends State<CupertinoTimerPickerWidget>
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text('Selected Time: $_selectedTime'),
+          Text('Selected Time: $selectedTime'),
           SizedBox(height: 20),
           CupertinoTimerPicker(
             mode: CupertinoTimerPickerMode.hm,
-            initialTimerDuration: _selectedTime,
+            initialTimerDuration: selectedTime,
             onTimerDurationChanged: (Duration newDuration) {
               setState(() {
-                _selectedTime = newDuration;
+                selectedTime = newDuration;
               });
             },
           ),
